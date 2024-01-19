@@ -1,0 +1,94 @@
+@server = http://localhost:3001
+
+### USERS
+
+### Correct login
+POST {{server}}/api/sessions
+Content-Type: application/json
+
+{"username": "claudiotancredi@polito.it", 
+"password": "eusebio"}
+
+### Wrong username/password for login
+POST {{server}}/api/sessions
+Content-Type: application/json
+
+{"username": "claudiotancredi@polito.it", 
+"password": "akkjfingf"}
+
+### Logout
+DELETE {{server}}/api/sessions/current
+
+### Check if the user is logged in or not
+GET {{server}}/api/sessions/current
+
+
+
+
+### STATIC CONTENT
+
+### Get a static resource (image)
+GET {{server}}/static/old.png
+
+
+
+
+
+
+### MEMES
+
+### GET all the memes from the server (both public and protected)
+GET {{server}}/api/memes
+
+### GET all the PUBLIC memes from the server
+GET {{server}}/api/memes/filter=public
+
+### POST to store a new meme into the server. Valid body.
+POST {{server}}/api/memes
+Content-Type: application/json
+
+{
+	"title": "Test1",
+	"imageId": 1,
+    "sentence1": "Text1",
+    "sentence2": "",
+    "sentence3": "",
+    "cssFontClass":"font-bangers",
+    "cssColourClass":"color-white",
+    "prot": true
+}
+
+### POST to store a new meme into the server. Invalid body.
+POST {{server}}/api/memes
+Content-Type: application/json
+
+{
+	"title": "ca",
+	"imageId": "String",
+    "sentence1": "",
+    "sentence2": 4,
+    "sentence3": "",
+    "cssFontClass":5,
+    "cssColourClass":true,
+    "prot": "String"
+}
+
+### DELETE a meme with the given id.
+DELETE {{server}}/api/memes/10
+
+### DELETE a meme with the given id. Invalid param.
+DELETE {{server}}/api/memes/2a 
+
+### DELETE a meme with the given id. Id of a meme that is not in the db.
+DELETE {{server}}/api/memes/2233 
+
+
+
+
+
+
+
+### IMAGES
+
+### GET all the images from the server
+GET {{server}}/api/images

@@ -1,0 +1,205 @@
+/* Add space so that items are shown below the navbar*/
+body {
+  padding-top: 70px;
+}
+
+/* Style container for meme*/
+.card-relative {
+  display    : inline-block;
+  position   : relative;
+  align-items: center !important;
+  width      : 100%;
+}
+
+/* Add the hand cursor while passing on memes so that 
+the user can click and see the details. It is used in combination
+with card-relative */
+.clickable {
+  cursor: pointer;
+}
+
+.font-bangers {
+  font: 18px Bangers;
+}
+
+.font-bitter {
+  font: 18px Bitter;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-black {
+  color: black;
+}
+
+.color-white {
+  color: white;
+}
+
+/* Style text with italic */
+.italic-text {
+  font-style: italic;
+  text-align: center;
+  font-size : 18px;
+}
+
+/* Style the list of images where the user can choose the background during the meme creation */
+.custom-previews {
+  max-height : 370px;
+  overflow-y : scroll;
+  align-items: center;
+  text-align : center;
+}
+
+/* Some CSS attributes in common between overlayed texts.
+They are used in combination with the other CSS
+classes about the position (bottom-single-text, etc.) */
+.standard-text {
+  word-wrap    : break-word !important;
+  overflow     : hidden !important;
+  text-overflow: clip !important;
+  overflow-wrap: break-word !important;
+  position     : absolute;
+}
+
+/* Bottom text 1st version */
+.bottom-single-text {
+  bottom     : 0%;
+  left       : 10%;
+  width      : 80%;
+  height     : 20% !important;
+  max-height : 2.8em !important;
+  line-height: 1.4em !important;
+}
+
+/* Bottom text 2nd version */
+.bottom-single-text2 {
+  bottom     : -2%;
+  left       : 10%;
+  width      : 80%;
+  height     : 20% !important;
+  max-height : 2.8em !important;
+  line-height: 1.4em !important;
+}
+
+/* Top right text */
+.top-right {
+  width      : 45%;
+  height     : 35%;
+  top        : 5%;
+  right      : 3%;
+  max-height : 7.5em !important;
+  line-height: 1.5em !important;
+}
+
+/* Bottom right text */
+.bottom-right {
+  width      : 45%;
+  height     : 35%;
+  bottom     : 5%;
+  right      : 3%;
+  max-height : 7.5em !important;
+  line-height: 1.5em !important;
+}
+
+/* Top left text */
+.top-left {
+  width      : 42%;
+  height     : 27%;
+  top        : 5%;
+  left       : 5%;
+  max-height : 5.2em !important;
+  line-height: 1.3em !important;
+}
+
+/* Center left text */
+.center-left {
+  width      : 42%;
+  height     : 27%;
+  top        : 37%;
+  left       : 5%;
+  max-height : 5.2em !important;
+  line-height: 1.3em !important;
+}
+
+/* Bottom left text */
+.bottom-left {
+  width      : 42%;
+  height     : 27%;
+  top        : 69%;
+  left       : 5%;
+  max-height : 5.2em !important;
+  line-height: 1.3em !important;
+}
+
+/* Style for buttons that allow choosing a color */
+.color-button {
+  position     : relative;
+  border-radius: 30% !important;
+  height       : 28px;
+  width        : 27px;
+  border-color : black !important;
+}
+
+.color-button-black {
+  background: black !important;
+}
+
+.color-button-red {
+  background: red !important;
+}
+
+.color-button-green {
+  background: green !important;
+}
+
+.color-button-white {
+  background: white !important;
+}
+
+/* Custom text-area, without the possibility to expand it */
+.text-area-resize {
+  resize: none;
+}
+
+/* Button for creating a new meme */
+.fixed-right-bottom {
+  position     : fixed;
+  right        : 0;
+  bottom       : 0;
+  z-index      : 1030;
+  margin       : 0 1.5rem 1.5rem 0;
+  border-radius: 50% !important;
+}
+
+/*Style the login and logout button*/
+.log-button {
+  color          : #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+/*Center the login form and the image used when there are no memes in the db*/
+.center {
+  margin       : 0;
+  position     : absolute;
+  top          : 50%;
+  left         : 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform    : translate(-50%, -50%);
+}
+
+/*Position for the go to home page button (when the URL is wrong)*/
+.goback-button-position {
+  margin       : 0;
+  position     : absolute;
+  top          : 80%;
+  left         : 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform    : translate(-50%, -50%);
+}
